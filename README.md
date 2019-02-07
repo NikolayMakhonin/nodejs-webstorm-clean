@@ -6,21 +6,22 @@
 
 # Description
 
-For quickly create NodeJs command line module using these command:
+For quickly create NodeJs command line module using these command (just copy/paste it to the console):
 
 (Create new empty repository before)
 
 ```cmd
-SET DIR_NAME=<directory name>
-SET YOUR_REPO_URL=<your new repository url>
-
+SET /p DIR_NAME=Enter project directory name
+SET /p YOUR_REPO_URL=Enter your new repository url
 git clone --origin template --branch cli https://github.com/NikolayMakhonin/nodejs-templates.git %DIR_NAME%
 cd %DIR_NAME%
+git branch -m cli master
+git tag -a -m "New project from template \"cli\"" v0.0.0
 git remote set-url --push template no_push
 git remote add origin %YOUR_REPO_URL%
 git checkout -b develop
-
 git push --all origin
+git push --tags origin
 
 ```
 
