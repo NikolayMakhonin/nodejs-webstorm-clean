@@ -1,9 +1,9 @@
-import helpers from '../../../main/helpers'
+import helpers from '../../../../main/helpers/xml'
 import path from 'path'
 import fs from 'fs'
 
-describe('helpers', function () {
-	const textXmlPath = require.resolve('../assets/workspace.xml')
+describe('helpers > xml', function () {
+	const textXmlPath = require.resolve('../../assets/workspace.xml')
 
 	it('loadFile', async function () {
 		const data = await helpers.loadFile(textXmlPath)
