@@ -52,12 +52,17 @@ export function cleanWorkspace(config) {
 }
 
 export async function cleanIdeaDir(ideaDir, outDir) {
-	ideaDir = path.resolve(ideaDir)
-	outDir = path.resolve(outDir)
+	if (!ideaDir) {
+		throw new Error('.idea directory is not specified')
+	}
+
+	if (outDir) {
+		outDir = path.resolve(outDir)
+	}
 
 	await fse.ensureDir(ideaDir)
 
-	if (ideaDir !== outDir) {
+	if (outDir && ideaDir !== outDir) {
 		await fse.copy(ideaDir, outDir)
 		ideaDir = outDir
 	}

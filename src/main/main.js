@@ -1,11 +1,11 @@
 import webstorm from './helpers/webstorm-config'
-import yargs from 'yargs'
+import yargs from 'yargs/yargs'
 
 export function parseArgs(argv) {
 	// see http://yargs.js.org/docs/
 	const args = yargs(argv)
 		.usage(
-			'$0 $1 [input]', '',
+			'$0 [input]', '',
 			o => {
 				o.positional('input', {
 					type     : 'string',

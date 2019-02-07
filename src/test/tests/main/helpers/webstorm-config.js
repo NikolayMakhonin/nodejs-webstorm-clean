@@ -3,7 +3,7 @@ import helpersXml from '../../../../main/helpers/xml'
 import helpers from '../../../../main/helpers/webstorm-config'
 
 describe('helpers > webstorm-config', function () {
-	const textXmlPath = require.resolve('../../assets/workspace.xml')
+	const textXmlPath = path.resolve(__dirname, '../../assets/workspace.xml')
 
 	it('cleanWorkspace', async function () {
 		const config = await helpersXml.loadXml(textXmlPath)
@@ -24,5 +24,7 @@ describe('helpers > webstorm-config', function () {
 		assert.ok(config?.project?.component)
 		// console.log(JSON.stringify(config, null, 4))
 		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'RunManager')
+
+		await assert.isRejected(helpers.cleanIdeaDir(), Error)
 	})
 })

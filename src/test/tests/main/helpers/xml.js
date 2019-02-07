@@ -3,7 +3,7 @@ import path from 'path'
 import fs from 'fs'
 
 describe('helpers > xml', function () {
-	const textXmlPath = require.resolve('../../assets/workspace.xml')
+	const textXmlPath = path.resolve(__dirname, '../../assets/workspace.xml')
 
 	it('loadFile', async function () {
 		const data = await helpers.loadFile(textXmlPath)

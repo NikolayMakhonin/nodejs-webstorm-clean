@@ -3,4 +3,4 @@
 'use strict'
 import {clean} from './main'
 
-clean(process.argv)
+clean(process.argv.slice(2))
