@@ -13,6 +13,18 @@
 
 Clean unnecessary webstorm project settings from .idea directory
 
+```bash
+webstorm-clean [input]
+
+Positionals:
+  input  .idea directory    [string] [default: ".idea"]
+
+Options:
+  --version     Show version number           [boolean]
+  --output, -o  Output directory
+  --help        Show help                     [boolean]
+```
+
 # License
 
 [CC0-1.0](LICENSE)
