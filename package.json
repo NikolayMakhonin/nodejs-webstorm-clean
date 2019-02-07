@@ -1,14 +1,14 @@
 {
-  "name": "TODO",
-  "version": "0.0.1",
-  "description": "TODO",
+  "name": "webstorm-clean",
+  "version": "1.0.2",
+  "description": "Clean unnecessary webstorm project settings from .idea directory",
   "bin": {
-    "TODO": "dist/js/main/cli.js"
+    "webstorm-clean": "dist/js/main/cli.js"
   },
-  "author": "TODO",
-  "homepage": "TODO",
+  "author": "Nikolay Makhonin",
+  "homepage": "https://github.com/NikolayMakhonin/nodejs-webstorm-clean",
   "bugs": {
-    "url": "TODO"
+    "url": "https://github.com/NikolayMakhonin/nodejs-webstorm-clean/issues"
   },
   "license": "CC0-1.0",
   "keywords": [
@@ -17,7 +17,17 @@
     "command-line",
     "cmd",
     "terminal",
-    "console"
+    "console",
+	
+    "idea",
+    "JetBrains",
+    "webstorm",
+    "settings",
+    "config",
+    "options",
+    "clean",
+    "cleaning",
+    "cleanup"
   ],
   "files": [
     "dist/**",
@@ -73,7 +83,6 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "execa": "^1.0.0",
     "fs-extra": "^7.0.1",
     "js-beautify": "^1.8.9",
     "mocha": "^5.2.0",
@@ -86,12 +95,13 @@
     "rollup-plugin-istanbul": "^2.0.1",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-pluginutils": "^2.3.3",
-    "shx": "^0.3.2"
+    "shx": "^0.3.2",
+    "mock-cli": "^0.1.2
   },
   "dependencies": {
-    "@babel/runtime": "^7.3.1",
-    "mock-cli": "^0.1.2",
+    "@babel/runtime": "^7.3.1"",
+    "yargs": "^12.0.5",
     "xml-js": "^1.6.9",
-    "yargs": "^12.0.5"
+    "fs-extra": "^7.0.1"
   }
 }
