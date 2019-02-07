@@ -26,3 +26,5 @@ before_install:
 
 script:
   - npm run ci
+
+  
