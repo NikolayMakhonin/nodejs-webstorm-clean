@@ -1,7 +1,7 @@
 import main from '../../../main/main'
 import path from 'path'
-import fse from "fs-extra";
-import helpersXml from "../../../main/helpers/xml";
+import fse from 'fs-extra'
+import helpersXml from '../../../main/helpers/xml'
 
 describe('main', function () {
 	const inputDir = path.dirname(require.resolve('../assets/workspace.xml'))
