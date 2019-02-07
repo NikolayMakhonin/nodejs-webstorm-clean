@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // eslint-disable-next-line strict
 'use strict'
-import {main} from '.'
+import {main} from './main'
 
-main(process.argv)
+main(process.argv.slice(2))
