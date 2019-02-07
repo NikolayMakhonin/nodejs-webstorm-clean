@@ -1,5 +1,5 @@
 import webstorm from './helpers/webstorm-config'
-import yargs from 'yargs/yargs'
+import yargs from 'yargs'
 
 export function parseArgs(argv) {
 	// see http://yargs.js.org/docs/
