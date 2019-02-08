@@ -25,5 +25,6 @@ describe('main', function () {
 
 	it('main', function () {
 		main.main('-x 4 -y 5')
+		main.main()
 	})
 })

@@ -28,5 +28,7 @@ describe('main', function () {
   });
   it('main', function () {
     _main.default.main('-x 4 -y 5');
+
+    _main.default.main();
   });
 });
