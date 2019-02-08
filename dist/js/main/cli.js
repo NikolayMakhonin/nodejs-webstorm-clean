@@ -4,4 +4,4 @@
 
 var _main = require("./main");
 
-(0, _main.main)(process.argv.slice(2));
+(0, _main.clean)(process.argv.slice(2));

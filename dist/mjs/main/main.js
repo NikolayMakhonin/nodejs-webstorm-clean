@@ -1,4 +1,4 @@
-import helpers from './helpers/helpers';
+import webstorm from './helpers/webstorm-config';
 import yargs from 'yargs';
 export function parseArgs(argv) {
   // see http://yargs.js.org/docs/
@@ -16,10 +16,11 @@ export function parseArgs(argv) {
   }).help().argv;
   return args;
 }
-export function main(argv) {
+export function clean(argv) {
   var args = parseArgs(argv || process.argv);
-  console.log(args);
+  return webstorm.cleanIdeaDir(args.input, args.output);
 }
 export default {
-  main: main
+  clean: clean,
+  parseArgs: parseArgs
 };

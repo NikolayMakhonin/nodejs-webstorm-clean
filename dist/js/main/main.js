@@ -4,10 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.parseArgs = parseArgs;
-exports.main = main;
+exports.clean = clean;
 exports.default = void 0;
 
-var _helpers = _interopRequireDefault(require("./helpers/helpers"));
+var _webstormConfig = _interopRequireDefault(require("./helpers/webstorm-config"));
 
 var _yargs = _interopRequireDefault(require("yargs"));
 
@@ -30,12 +30,13 @@ function parseArgs(argv) {
   return args;
 }
 
-function main(argv) {
+function clean(argv) {
   const args = parseArgs(argv || process.argv);
-  console.log(args);
+  return _webstormConfig.default.cleanIdeaDir(args.input, args.output);
 }
 
 var _default = {
-  main
+  clean,
+  parseArgs
 };
 exports.default = _default;

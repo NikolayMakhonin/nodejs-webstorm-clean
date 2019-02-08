@@ -2,5 +2,5 @@
 // eslint-disable-next-line strict
 'use strict';
 
-import { main } from './main';
-main(process.argv.slice(2));
+import { clean } from './main';
+clean(process.argv.slice(2));
