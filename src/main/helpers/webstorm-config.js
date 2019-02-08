@@ -26,12 +26,14 @@ const unnecessary = [
 	'XDebuggerManager',
 	'debuggerHistoryManager',
 	'editorHistoryManager',
-	'PropertiesComponent',
 	'ProjectLevelVcsManager',
 	'JsFlowSettings'
 ]
 
-const necessary = ['RunManager']
+const necessary = [
+	'RunManager',
+	'PropertiesComponent'
+]
 
 export function cleanWorkspace(config) {
 	let components = config?.project?.component

@@ -13,7 +13,7 @@ describe('helpers > webstorm-config', function () {
 
 		helpers.cleanWorkspace(config)
 
-		assert.strictEqual(config?.project?.component[0]?._attributes?.name, 'RunManager')
+		assert.strictEqual(config?.project?.component[0]?._attributes?.name, 'PropertiesComponent')
 		// console.log(JSON.stringify(config, null, 4))
 	})
 
@@ -23,7 +23,7 @@ describe('helpers > webstorm-config', function () {
 		assert.ok(config)
 		assert.ok(config?.project?.component)
 		// console.log(JSON.stringify(config, null, 4))
-		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'RunManager')
+		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'PropertiesComponent')
 
 		await assert.isRejected(helpers.cleanIdeaDir(), Error)
 	})

@@ -1,3 +1,8 @@
+1.0.4 / 2019-02-08
+===================
+
+  * Keep workspace.xml/component/PropertiesComponent 
+  
 1.0.3 / 2019-02-07
 ===================
 

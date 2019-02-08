@@ -72,6 +72,6 @@ describe('main', function () {
 		config = await helpersXml.loadXml(path.resolve(outputDir, 'workspace.xml'))
 		assert.ok(config)
 		assert.ok(config?.project?.component)
-		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'RunManager')
+		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'PropertiesComponent')
 	})
 })
