@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -16,8 +18,6 @@ var _fs = _interopRequireDefault(require("fs"));
 var _fsExtra = _interopRequireDefault(require("fs-extra"));
 
 var _xmlJs = _interopRequireDefault(require("xml-js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function loadFile(filePath) {
   return new Promise((resolve, reject) => _fs.default.readFile(filePath, (err, data) => {

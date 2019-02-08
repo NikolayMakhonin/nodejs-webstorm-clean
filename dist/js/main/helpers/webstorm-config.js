@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -12,8 +14,6 @@ var _path = _interopRequireDefault(require("path"));
 var _fsExtra = _interopRequireDefault(require("fs-extra"));
 
 var _xml = _interopRequireDefault(require("./xml"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const unnecessary = ['ChangeListManager', 'CoverageDataManager', 'CoverageViewManager', 'FileEditorManager', 'FileTemplateManagerImpl', 'FindInProjectRecents', 'Git.Settings', 'IdeDocumentHistory', 'ProjectFrameBounds', 'ProjectView', 'RecentsManager', 'RunDashboard', 'SvnConfiguration', 'TaskManager', 'TestHistory', 'TimeTrackingManager', 'TodoView', 'ToolWindowManager', 'TypeScriptGeneratedFilesManager', 'VcsManagerConfiguration', 'XDebuggerManager', 'debuggerHistoryManager', 'editorHistoryManager', 'ProjectLevelVcsManager', 'JsFlowSettings'];
 const necessary = ['RunManager', 'PropertiesComponent'];

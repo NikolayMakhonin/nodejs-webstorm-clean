@@ -1,12 +1,12 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _xml = _interopRequireDefault(require("../../../../main/helpers/xml"));
 
 var _path = _interopRequireDefault(require("path"));
 
 var _fs = _interopRequireDefault(require("fs"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 describe('helpers > xml', function () {
   const textXmlPath = _path.default.resolve(__dirname, '../../assets/workspace.xml');

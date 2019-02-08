@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _main = _interopRequireDefault(require("../../../main/main"));
 
 var _path = _interopRequireDefault(require("path"));
@@ -9,8 +11,6 @@ var _fsExtra = _interopRequireDefault(require("fs-extra"));
 var _mockCli = _interopRequireDefault(require("mock-cli"));
 
 var _xml = _interopRequireDefault(require("../../../main/helpers/xml"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 describe('main', function () {
   const inputDir = _path.default.resolve(__dirname, '../assets');

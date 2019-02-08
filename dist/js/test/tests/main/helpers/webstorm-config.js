@@ -1,12 +1,12 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _path = _interopRequireDefault(require("path"));
 
 var _xml = _interopRequireDefault(require("../../../../main/helpers/xml"));
 
 var _webstormConfig = _interopRequireDefault(require("../../../../main/helpers/webstorm-config"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 describe('helpers > webstorm-config', function () {
   const textXmlPath = _path.default.resolve(__dirname, '../../assets/workspace.xml');
