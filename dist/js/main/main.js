@@ -32,7 +32,7 @@ function parseArgs(argv) {
 
 function main(argv) {
   const args = parseArgs(argv || process.argv);
-  console.log(args);
+  console.log(args, _helpers.default.test);
 }
 
 var _default = {

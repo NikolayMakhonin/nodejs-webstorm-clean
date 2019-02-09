@@ -18,7 +18,7 @@ export function parseArgs(argv) {
 }
 export function main(argv) {
   var args = parseArgs(argv || process.argv);
-  console.log(args);
+  console.log(args, helpers.test);
 }
 export default {
   main: main

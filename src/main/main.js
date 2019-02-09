@@ -29,7 +29,7 @@ export function parseArgs(argv) {
 
 export function main(argv) {
 	const args = parseArgs(argv || process.argv)
-	console.log(args)
+	console.log(args, helpers.test)
 }
 
 export default {
