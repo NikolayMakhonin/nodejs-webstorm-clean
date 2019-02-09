@@ -1,6 +1,6 @@
 {
   "name": "webstorm-clean",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Clean unnecessary webstorm project settings from .idea directory",
   "bin": {
     "webstorm-clean": "dist/js/main/cli.js"

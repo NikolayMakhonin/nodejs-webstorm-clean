@@ -2,38 +2,35 @@ import path from 'path'
 import fse from 'fs-extra'
 import xmlHelpers from './xml'
 
-const unnecessary = [
-	'ChangeListManager',
-	'CoverageDataManager',
-	'CoverageViewManager',
-	'FileEditorManager',
-	'FileTemplateManagerImpl',
-	'FindInProjectRecents',
-	'Git.Settings',
-	'IdeDocumentHistory',
-	'ProjectFrameBounds',
-	'ProjectView',
-	'RecentsManager',
-	'RunDashboard',
-	'SvnConfiguration',
-	'TaskManager',
-	'TestHistory',
-	'TimeTrackingManager',
-	'TodoView',
-	'ToolWindowManager',
-	'TypeScriptGeneratedFilesManager',
-	'VcsManagerConfiguration',
-	'XDebuggerManager',
-	'debuggerHistoryManager',
-	'editorHistoryManager',
-	'ProjectLevelVcsManager',
-	'JsFlowSettings'
-]
-
-const necessary = [
-	'RunManager',
-	'PropertiesComponent'
-]
+const rules = {
+	ChangeListManager              : {list: false},
+	CoverageDataManager            : false,
+	CoverageViewManager            : false,
+	FileEditorManager              : false,
+	FileTemplateManagerImpl        : false,
+	FindInProjectRecents           : false,
+	'Git.Settings'                 : false,
+	IdeDocumentHistory             : false,
+	ProjectFrameBounds             : false,
+	ProjectView                    : false,
+	RecentsManager                 : false,
+	RunDashboard                   : false,
+	SvnConfiguration               : false,
+	TaskManager                    : false,
+	TestHistory                    : false,
+	TimeTrackingManager            : false,
+	TodoView                       : false,
+	ToolWindowManager              : false,
+	TypeScriptGeneratedFilesManager: false,
+	VcsManagerConfiguration        : false,
+	XDebuggerManager               : false,
+	debuggerHistoryManager         : false,
+	editorHistoryManager           : false,
+	ProjectLevelVcsManager         : false,
+	JsFlowSettings                 : false,
+	RunManager                     : true,
+	PropertiesComponent            : true
+}
 
 export function cleanWorkspace(config) {
 	let components = config?.project?.component
@@ -44,9 +41,16 @@ export function cleanWorkspace(config) {
 		let i = 0
 		while (i < components.length) {
 			const component = components[i]
-			if (unnecessary.includes(component?._attributes?.name)) {
+			const rule = rules[component?._attributes?.name]
+			if (rule === false) {
 				components.splice(i, 1)
 				continue
+			} else if (rule && typeof rule === 'object') {
+				for (const key in rule) {
+					if (Object.prototype.hasOwnProperty.call(rule, key)) {
+						delete component[key]
+					}
+				}
 			}
 			i++
 		}

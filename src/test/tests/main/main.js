@@ -66,12 +66,14 @@ describe('main', function () {
 		assert.ok(config)
 		assert.ok(config?.project?.component)
 		assert.strictEqual(config?.project?.component[0]?._attributes?.name, 'ChangeListManager')
+		assert.ok((config?.project?.component[0] || config?.project?.component)?.list)
 
 		await main.clean(`"${inputDir}" -o "${outputDir}"`)
 
 		config = await helpersXml.loadXml(path.resolve(outputDir, 'workspace.xml'))
 		assert.ok(config)
 		assert.ok(config?.project?.component)
-		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'PropertiesComponent')
+		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'ChangeListManager')
+		assert.notOk((config?.project?.component[0] || config?.project?.component)?.list)
 	})
 })

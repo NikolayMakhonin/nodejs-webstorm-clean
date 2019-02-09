@@ -10,10 +10,12 @@ describe('helpers > webstorm-config', function () {
 		assert.ok(config)
 		assert.ok(config?.project?.component)
 		assert.strictEqual(config?.project?.component[0]?._attributes?.name, 'ChangeListManager')
+		assert.ok(config?.project?.component[0]?.list)
 
 		helpers.cleanWorkspace(config)
 
-		assert.strictEqual(config?.project?.component[0]?._attributes?.name, 'PropertiesComponent')
+		assert.strictEqual(config?.project?.component[0]?._attributes?.name, 'ChangeListManager')
+		assert.notOk(config?.project?.component[0]?.list)
 		// console.log(JSON.stringify(config, null, 4))
 	})
 
@@ -23,7 +25,8 @@ describe('helpers > webstorm-config', function () {
 		assert.ok(config)
 		assert.ok(config?.project?.component)
 		// console.log(JSON.stringify(config, null, 4))
-		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'PropertiesComponent')
+		assert.strictEqual((config?.project?.component[0] || config?.project?.component)?._attributes?.name, 'ChangeListManager')
+		assert.notOk((config?.project?.component[0] || config?.project?.component)?.list)
 
 		await assert.isRejected(helpers.cleanIdeaDir(), Error)
 	})
