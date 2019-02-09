@@ -1,10 +1,40 @@
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
+import _typeof from "@babel/runtime/helpers/typeof";
 import path from 'path';
 import fse from 'fs-extra';
 import xmlHelpers from './xml';
-var unnecessary = ['ChangeListManager', 'CoverageDataManager', 'CoverageViewManager', 'FileEditorManager', 'FileTemplateManagerImpl', 'FindInProjectRecents', 'Git.Settings', 'IdeDocumentHistory', 'ProjectFrameBounds', 'ProjectView', 'RecentsManager', 'RunDashboard', 'SvnConfiguration', 'TaskManager', 'TestHistory', 'TimeTrackingManager', 'TodoView', 'ToolWindowManager', 'TypeScriptGeneratedFilesManager', 'VcsManagerConfiguration', 'XDebuggerManager', 'debuggerHistoryManager', 'editorHistoryManager', 'ProjectLevelVcsManager', 'JsFlowSettings'];
-var necessary = ['RunManager', 'PropertiesComponent'];
+var rules = {
+  ChangeListManager: {
+    list: false
+  },
+  CoverageDataManager: false,
+  CoverageViewManager: false,
+  FileEditorManager: false,
+  FileTemplateManagerImpl: false,
+  FindInProjectRecents: false,
+  'Git.Settings': false,
+  IdeDocumentHistory: false,
+  ProjectFrameBounds: false,
+  ProjectView: false,
+  RecentsManager: false,
+  RunDashboard: false,
+  SvnConfiguration: false,
+  TaskManager: false,
+  TestHistory: false,
+  TimeTrackingManager: false,
+  TodoView: false,
+  ToolWindowManager: false,
+  TypeScriptGeneratedFilesManager: false,
+  VcsManagerConfiguration: false,
+  XDebuggerManager: false,
+  debuggerHistoryManager: false,
+  editorHistoryManager: false,
+  ProjectLevelVcsManager: false,
+  JsFlowSettings: false,
+  RunManager: true,
+  PropertiesComponent: true
+};
 export function cleanWorkspace(config) {
   var _config$project;
 
@@ -21,10 +51,17 @@ export function cleanWorkspace(config) {
       var _component$_attribute;
 
       var component = components[i];
+      var rule = rules[component === null || component === void 0 ? void 0 : (_component$_attribute = component._attributes) === null || _component$_attribute === void 0 ? void 0 : _component$_attribute.name];
 
-      if (unnecessary.includes(component === null || component === void 0 ? void 0 : (_component$_attribute = component._attributes) === null || _component$_attribute === void 0 ? void 0 : _component$_attribute.name)) {
+      if (rule === false) {
         components.splice(i, 1);
         continue;
+      } else if (rule && _typeof(rule) === 'object') {
+        for (var key in rule) {
+          if (Object.prototype.hasOwnProperty.call(rule, key)) {
+            delete component[key];
+          }
+        }
       }
 
       i++;

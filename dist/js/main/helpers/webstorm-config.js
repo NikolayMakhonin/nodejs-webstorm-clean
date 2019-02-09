@@ -15,8 +15,37 @@ var _fsExtra = _interopRequireDefault(require("fs-extra"));
 
 var _xml = _interopRequireDefault(require("./xml"));
 
-const unnecessary = ['ChangeListManager', 'CoverageDataManager', 'CoverageViewManager', 'FileEditorManager', 'FileTemplateManagerImpl', 'FindInProjectRecents', 'Git.Settings', 'IdeDocumentHistory', 'ProjectFrameBounds', 'ProjectView', 'RecentsManager', 'RunDashboard', 'SvnConfiguration', 'TaskManager', 'TestHistory', 'TimeTrackingManager', 'TodoView', 'ToolWindowManager', 'TypeScriptGeneratedFilesManager', 'VcsManagerConfiguration', 'XDebuggerManager', 'debuggerHistoryManager', 'editorHistoryManager', 'ProjectLevelVcsManager', 'JsFlowSettings'];
-const necessary = ['RunManager', 'PropertiesComponent'];
+const rules = {
+  ChangeListManager: {
+    list: false
+  },
+  CoverageDataManager: false,
+  CoverageViewManager: false,
+  FileEditorManager: false,
+  FileTemplateManagerImpl: false,
+  FindInProjectRecents: false,
+  'Git.Settings': false,
+  IdeDocumentHistory: false,
+  ProjectFrameBounds: false,
+  ProjectView: false,
+  RecentsManager: false,
+  RunDashboard: false,
+  SvnConfiguration: false,
+  TaskManager: false,
+  TestHistory: false,
+  TimeTrackingManager: false,
+  TodoView: false,
+  ToolWindowManager: false,
+  TypeScriptGeneratedFilesManager: false,
+  VcsManagerConfiguration: false,
+  XDebuggerManager: false,
+  debuggerHistoryManager: false,
+  editorHistoryManager: false,
+  ProjectLevelVcsManager: false,
+  JsFlowSettings: false,
+  RunManager: true,
+  PropertiesComponent: true
+};
 
 function cleanWorkspace(config) {
   var _config$project;
@@ -34,10 +63,17 @@ function cleanWorkspace(config) {
       var _component$_attribute;
 
       const component = components[i];
+      const rule = rules[component === null || component === void 0 ? void 0 : (_component$_attribute = component._attributes) === null || _component$_attribute === void 0 ? void 0 : _component$_attribute.name];
 
-      if (unnecessary.includes(component === null || component === void 0 ? void 0 : (_component$_attribute = component._attributes) === null || _component$_attribute === void 0 ? void 0 : _component$_attribute.name)) {
+      if (rule === false) {
         components.splice(i, 1);
         continue;
+      } else if (rule && typeof rule === 'object') {
+        for (const key in rule) {
+          if (Object.prototype.hasOwnProperty.call(rule, key)) {
+            delete component[key];
+          }
+        }
       }
 
       i++;

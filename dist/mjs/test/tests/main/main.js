@@ -86,7 +86,7 @@ describe('main', function () {
   _asyncToGenerator(
   /*#__PURE__*/
   _regeneratorRuntime.mark(function _callee2() {
-    var _config, _config$project, _config2, _config2$project, _config2$project$comp, _config2$project$comp2, _config3, _config3$project, _ref3, _ref3$_attributes, _config4, _config4$project, _config5, _config5$project;
+    var _config, _config$project, _config2, _config2$project, _config2$project$comp, _config2$project$comp2, _ref3, _config3, _config3$project, _config4, _config4$project, _config5, _config5$project, _ref4, _ref4$_attributes, _config6, _config6$project, _config7, _config7$project, _ref5, _config8, _config8$project, _config9, _config9$project;
 
     var config;
     return _regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -114,20 +114,22 @@ describe('main', function () {
             assert.ok(config);
             assert.ok((_config = config) === null || _config === void 0 ? void 0 : (_config$project = _config.project) === null || _config$project === void 0 ? void 0 : _config$project.component);
             assert.strictEqual((_config2 = config) === null || _config2 === void 0 ? void 0 : (_config2$project = _config2.project) === null || _config2$project === void 0 ? void 0 : (_config2$project$comp = _config2$project.component[0]) === null || _config2$project$comp === void 0 ? void 0 : (_config2$project$comp2 = _config2$project$comp._attributes) === null || _config2$project$comp2 === void 0 ? void 0 : _config2$project$comp2.name, 'ChangeListManager');
-            _context2.next = 13;
+            assert.ok((_ref3 = ((_config3 = config) === null || _config3 === void 0 ? void 0 : (_config3$project = _config3.project) === null || _config3$project === void 0 ? void 0 : _config3$project.component[0]) || ((_config4 = config) === null || _config4 === void 0 ? void 0 : (_config4$project = _config4.project) === null || _config4$project === void 0 ? void 0 : _config4$project.component)) === null || _ref3 === void 0 ? void 0 : _ref3.list);
+            _context2.next = 14;
             return main.clean("\"".concat(inputDir, "\" -o \"").concat(outputDir, "\""));
 
-          case 13:
-            _context2.next = 15;
+          case 14:
+            _context2.next = 16;
             return helpersXml.loadXml(path.resolve(outputDir, 'workspace.xml'));
 
-          case 15:
+          case 16:
             config = _context2.sent;
             assert.ok(config);
-            assert.ok((_config3 = config) === null || _config3 === void 0 ? void 0 : (_config3$project = _config3.project) === null || _config3$project === void 0 ? void 0 : _config3$project.component);
-            assert.strictEqual((_ref3 = ((_config4 = config) === null || _config4 === void 0 ? void 0 : (_config4$project = _config4.project) === null || _config4$project === void 0 ? void 0 : _config4$project.component[0]) || ((_config5 = config) === null || _config5 === void 0 ? void 0 : (_config5$project = _config5.project) === null || _config5$project === void 0 ? void 0 : _config5$project.component)) === null || _ref3 === void 0 ? void 0 : (_ref3$_attributes = _ref3._attributes) === null || _ref3$_attributes === void 0 ? void 0 : _ref3$_attributes.name, 'PropertiesComponent');
+            assert.ok((_config5 = config) === null || _config5 === void 0 ? void 0 : (_config5$project = _config5.project) === null || _config5$project === void 0 ? void 0 : _config5$project.component);
+            assert.strictEqual((_ref4 = ((_config6 = config) === null || _config6 === void 0 ? void 0 : (_config6$project = _config6.project) === null || _config6$project === void 0 ? void 0 : _config6$project.component[0]) || ((_config7 = config) === null || _config7 === void 0 ? void 0 : (_config7$project = _config7.project) === null || _config7$project === void 0 ? void 0 : _config7$project.component)) === null || _ref4 === void 0 ? void 0 : (_ref4$_attributes = _ref4._attributes) === null || _ref4$_attributes === void 0 ? void 0 : _ref4$_attributes.name, 'ChangeListManager');
+            assert.notOk((_ref5 = ((_config8 = config) === null || _config8 === void 0 ? void 0 : (_config8$project = _config8.project) === null || _config8$project === void 0 ? void 0 : _config8$project.component[0]) || ((_config9 = config) === null || _config9 === void 0 ? void 0 : (_config9$project = _config9.project) === null || _config9$project === void 0 ? void 0 : _config9$project.component)) === null || _ref5 === void 0 ? void 0 : _ref5.list);
 
-          case 19:
+          case 21:
           case "end":
             return _context2.stop();
         }
