@@ -13,10 +13,8 @@
 		"allowImportExportEverywhere": false,
 		"codeFrame": true
 	},
-
+	
 	"rules": {
-		"no-unused-vars": [ "off" ],
-		"no-new-wrappers": [ "off" ],
 		"no-process-env" : "off"
 	}
 }
