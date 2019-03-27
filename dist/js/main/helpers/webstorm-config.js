@@ -37,12 +37,12 @@ const rules = {
   TodoView: false,
   ToolWindowManager: false,
   TypeScriptGeneratedFilesManager: false,
-  VcsManagerConfiguration: false,
+  VcsManagerConfiguration: true,
   XDebuggerManager: false,
   debuggerHistoryManager: false,
   editorHistoryManager: false,
-  ProjectLevelVcsManager: false,
-  JsFlowSettings: false,
+  ProjectLevelVcsManager: true,
+  JsFlowSettings: true,
   RunManager: true,
   PropertiesComponent: true
 };

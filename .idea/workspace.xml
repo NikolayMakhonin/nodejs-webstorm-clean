@@ -1,1 +1,234 @@
-<?xml version="1.0" encoding="UTF-8"?><project version="4"><component name="PropertiesComponent"><property name="WebServerToolWindowFactoryState" value="false"/><property name="node.js.detected.package.eslint" value="true"/><property name="node.js.detected.package.standard" value="true"/><property name="node.js.path.for.package.eslint" value="$Node2$/node"/><property name="node.js.path.for.package.standard" value="$Node2$/node"/><property name="node.js.selected.package.eslint" value="L:\Work\_GIT\GitHub\NodeJs\templates\nodejs-templates\node_modules\eslint"/><property name="node.js.selected.package.standard" value="L:\Work\_GIT\GitHub\NodeJs\templates\nodejs-templates\node_modules\eslint"/><property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha"/><property name="nodejs_package_manager_path" value="npm"/><property name="restartRequiresConfirmation" value="false"/><property name="settings.editor.selected.configurable" value="coverage"/></component><component name="RunManager" selected="Mocha.Watch Mocha"><configuration default="true" type="JavaScriptTestRunnerKarma"><config-file value="$PROJECT_DIR$/env/karma.conf.tests.js"/><karma-package-dir value="$PROJECT_DIR$/node_modules/karma"/><node-interpreter value="$Node2$/node"/><envs/><method v="2"/></configuration><configuration default="true" type="NodeJSConfigurationType" path-to-node="$Node2$/node" node-parameters="--max-old-space-size=4096" working-dir="$PROJECT_DIR$"><method v="2"/></configuration><configuration default="true" type="mocha-javascript-test-runner"><node-interpreter>$Node2$/node</node-interpreter><node-options>--max-old-space-size=4096</node-options><mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package><working-directory>$PROJECT_DIR$</working-directory><pass-parent-env>true</pass-parent-env><ui>bdd</ui><extra-mocha-options>-r ./env/register-babel --exclude **/src/** --watch --watch-extensions  js){100}|^(((?!([\\/](dist|tmp|node_modules|reports|\.[^\\/]*)[\\/]|\.(log|bak)$)).)*</extra-mocha-options><test-kind>PATTERN</test-kind><test-pattern>./src/test/tests/**/*.js</test-pattern><method v="2"/></configuration><list><item itemvalue="Mocha.Coverage Mocha"/><item itemvalue="Mocha.Watch Mocha"/></list></component></project>
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="01cfae96-4b5c-4651-ab32-c3af7e057412" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="93">
+                <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/helpers/webstorm-config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/tests/main/helpers/webstorm-config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="29" selection-start-line="27" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/tests/main/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HISTORY.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="78">
+                <caret line="3" column="55" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="55" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="nodejs-webstorm-clean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodejs-webstorm-clean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nodejs-webstorm-clean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodejs-webstorm-clean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nodejs-webstorm-clean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodejs-webstorm-clean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nodejs-webstorm-clean" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nodejs-webstorm-clean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="$Node2$/node" />
+    <property name="node.js.path.for.package.standard" value="$Node2$/node" />
+    <property name="node.js.selected.package.eslint" value="L:\Work\_GIT\GitHub\NodeJs\templates\nodejs-templates\node_modules\eslint" />
+    <property name="node.js.selected.package.standard" value="L:\Work\_GIT\GitHub\NodeJs\templates\nodejs-templates\node_modules\eslint" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Mocha.Watch Mocha">
+    <configuration default="true" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/env/karma.conf.tests.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <node-interpreter value="$Node2$/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" path-to-node="$Node2$/node" node-parameters="--max-old-space-size=4096" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner">
+      <node-interpreter>$Node2$/node</node-interpreter>
+      <node-options>--max-old-space-size=4096</node-options>
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>-r ./env/register-babel --exclude **/src/** --watch --watch-extensions  js){100}|^(((?!([\\/](dist|tmp|node_modules|reports|\.[^\\/]*)[\\/]|\.(log|bak)$)).)*</extra-mocha-options>
+      <test-kind>PATTERN</test-kind>
+      <test-pattern>./src/test/tests/**/*.js</test-pattern>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Mocha.Coverage Mocha" />
+      <item itemvalue="Mocha.Watch Mocha" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af535da5-a5f7-445f-8b88-66181b2d3716" name="Default Changelist" comment="" />
+      <created>1549609021351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549609021351</updated>
+      <workItem from="1549609022756" duration="456000" />
+      <workItem from="1549692525155" duration="12000" />
+      <workItem from="1549698371963" duration="1383000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Watch_Mocha - 2019.02.09 at 09h 54m 58s.xml">
+      <configuration name="Watch Mocha" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Watch_Mocha - 2019.02.09 at 09h 55m 44s.xml">
+      <configuration name="Watch Mocha" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Watch_Mocha - 2019.02.09 at 09h 56m 29s.xml">
+      <configuration name="Watch Mocha" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Watch_Mocha - 2019.02.09 at 09h 56m 41s.xml">
+      <configuration name="Watch Mocha" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Watch_Mocha - 2019.02.09 at 09h 57m 21s.xml">
+      <configuration name="Watch Mocha" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Watch_Mocha - 2019.02.09 at 09h 57m 58s.xml">
+      <configuration name="Watch Mocha" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1851000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4" y="-4" width="1928" height="892" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973601" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286908" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

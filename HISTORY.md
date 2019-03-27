@@ -1,3 +1,10 @@
+1.0.7 / 2019-02-09
+===================
+
+  * Keep workspace.xml/component/VcsManagerConfiguration
+  * Keep workspace.xml/component/ProjectLevelVcsManager
+  * Keep workspace.xml/component/JsFlowSettings
+  
 1.0.6 / 2019-02-09
 ===================
 
