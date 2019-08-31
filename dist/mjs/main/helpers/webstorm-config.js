@@ -13,7 +13,7 @@ var rules = {
   FileEditorManager: false,
   FileTemplateManagerImpl: false,
   FindInProjectRecents: false,
-  'Git.Settings': false,
+  'Git.Settings': true,
   IdeDocumentHistory: false,
   ProjectFrameBounds: false,
   ProjectView: false,
@@ -58,7 +58,7 @@ export function cleanWorkspace(config) {
         continue;
       } else if (rule && _typeof(rule) === 'object') {
         for (var key in rule) {
-          if (Object.prototype.hasOwnProperty.call(rule, key)) {
+          if (Object.prototype.hasOwnProperty.call(rule, key) && rule[key] === false) {
             delete component[key];
           }
         }

@@ -21,6 +21,11 @@
     <SUITE FILE_PATH="coverage/nodejs_template_cli$Watch_Mocha.dat" NAME="Watch Mocha Coverage Results" MODIFIED="1549388271204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="MochaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/nodejs_template_helpers$CI_Karma.dat" NAME="CI Karma Coverage Results" MODIFIED="1549207666338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="KarmaJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="NamedScopeManager">
+    <scope name="src-main" pattern="file[base]:src/main//*" />
+    <scope name="src-test" pattern="file[base]:src/test//*" />
+    <scope name="All Sources" pattern="&amp;&lt; &amp;&gt; &amp;&quot;file[base]:*/&amp;&amp;!file[base]:.idea//*&amp;&amp;!file[base]:_trash//*&amp;&amp;!file[base]:node_modules//*&amp;&amp;!file[base]:tmp//*&amp;&amp;!file[base]:dist//*&amp;&amp;!file[base]:docs//*&amp;&amp;!file[base]:env/polyfill//*&amp;&amp;!file:src/test/performance/node/src/SetPolyfill.js" />
+  </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="597" />
   </component>

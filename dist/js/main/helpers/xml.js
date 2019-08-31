@@ -19,6 +19,8 @@ var _fsExtra = _interopRequireDefault(require("fs-extra"));
 
 var _xmlJs = _interopRequireDefault(require("xml-js"));
 
+var _xmlFormatter = _interopRequireDefault(require("xml-formatter"));
+
 function loadFile(filePath) {
   return new Promise((resolve, reject) => _fs.default.readFile(filePath, (err, data) => {
     if (err) {
@@ -67,6 +69,31 @@ async function loadXml(filePath) {
   return parseXml(xml);
 }
 
+function traversalObject(object, handler, parentKey) {
+  if (object == null || typeof object !== 'object') {
+    return object;
+  }
+
+  for (const key in object) {
+    if (Object.prototype.hasOwnProperty.call(object, key)) {
+      object[key] = handler(key, object[key], parentKey);
+      traversalObject(object[key], handler, key);
+    }
+  }
+
+  return object;
+}
+
+function escapeSpecialCharsInAttributes(jsObject) {
+  traversalObject(jsObject, (key, value, parentKey) => {
+    if (parentKey === '_attributes' && typeof value === 'string') {
+      return value.replace(/&/g, '&amp;');
+    }
+
+    return value;
+  });
+}
+
 function saveXml(filePath, jsObject) {
   const xml = buildXml(jsObject);
   return saveFileText(filePath, xml);
@@ -79,8 +106,12 @@ function parseXml(xmlText) {
 }
 
 function buildXml(jsObject) {
-  return _xmlJs.default.js2xml(jsObject, {
+  escapeSpecialCharsInAttributes(jsObject);
+  return (0, _xmlFormatter.default)(_xmlJs.default.js2xml(jsObject, {
     compact: true
+  }), {
+    collapseContent: true,
+    indentation: '\t'
   });
 }
 

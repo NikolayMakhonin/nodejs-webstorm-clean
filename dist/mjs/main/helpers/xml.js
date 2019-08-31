@@ -1,9 +1,11 @@
 import _regeneratorRuntime from "@babel/runtime/regenerator";
+import _typeof from "@babel/runtime/helpers/typeof";
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import path from 'path';
 import fs from 'fs';
 import fse from 'fs-extra';
 import xmlConverter from 'xml-js';
+import format from 'xml-formatter';
 export function loadFile(filePath) {
   return new Promise(function (resolve, reject) {
     return fs.readFile(filePath, function (err, data) {
@@ -141,6 +143,31 @@ function _loadXml() {
   return _loadXml.apply(this, arguments);
 }
 
+function traversalObject(object, handler, parentKey) {
+  if (object == null || _typeof(object) !== 'object') {
+    return object;
+  }
+
+  for (var key in object) {
+    if (Object.prototype.hasOwnProperty.call(object, key)) {
+      object[key] = handler(key, object[key], parentKey);
+      traversalObject(object[key], handler, key);
+    }
+  }
+
+  return object;
+}
+
+function escapeSpecialCharsInAttributes(jsObject) {
+  traversalObject(jsObject, function (key, value, parentKey) {
+    if (parentKey === '_attributes' && typeof value === 'string') {
+      return value.replace(/&/g, '&amp;');
+    }
+
+    return value;
+  });
+}
+
 function saveXml(filePath, jsObject) {
   var xml = buildXml(jsObject);
   return saveFileText(filePath, xml);
@@ -153,8 +180,12 @@ function parseXml(xmlText) {
 }
 
 function buildXml(jsObject) {
-  return xmlConverter.js2xml(jsObject, {
+  escapeSpecialCharsInAttributes(jsObject);
+  return format(xmlConverter.js2xml(jsObject, {
     compact: true
+  }), {
+    collapseContent: true,
+    indentation: '\t'
   });
 }
 

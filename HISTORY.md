@@ -1,3 +1,10 @@
+1.0.8 / 2019-08-31
+===================
+
+  * Fix saving & symbol in attributes
+  * Add xml formatter
+  * Keep workspace.xml/Git.Settings
+  
 1.0.7 / 2019-02-09
 ===================
 

@@ -50,11 +50,11 @@ describe('helpers > xml', function () {
 		assert.strictEqual(loadedText, text)
 	})
 
-	const testXml = '<?xml version="1.0" encoding="utf-8"?>'
-		+ '<note importance="high" logged="true">'
-		+ '<title>Happy</title>'
-		+ '<todo>Work</todo>'
-		+ '<todo>Play</todo>'
+	const testXml = '<?xml version="1.0" encoding="utf-8"?>\r\n'
+		+ '<note importance="high" logged="true">\r\n'
+		+ '\t<title>Happy</title>\r\n'
+		+ '\t<todo>Work</todo>\r\n'
+		+ '\t<todo>Play</todo>\r\n'
 		+ '</note>'
 
 	const testJs = {

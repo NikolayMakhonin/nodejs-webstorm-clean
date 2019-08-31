@@ -153,7 +153,7 @@ describe('helpers > xml', function () {
       }
     }, _callee5, this);
   })));
-  var testXml = '<?xml version="1.0" encoding="utf-8"?>' + '<note importance="high" logged="true">' + '<title>Happy</title>' + '<todo>Work</todo>' + '<todo>Play</todo>' + '</note>';
+  var testXml = '<?xml version="1.0" encoding="utf-8"?>\r\n' + '<note importance="high" logged="true">\r\n' + '\t<title>Happy</title>\r\n' + '\t<todo>Work</todo>\r\n' + '\t<todo>Play</todo>\r\n' + '</note>';
   var testJs = {
     _declaration: {
       _attributes: {
